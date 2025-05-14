@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="~/admin.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <h2>ADMIN</h2>
+        <ul>
+            <li><a href="@Url.Action("DanhSachTaiKhoan", "Admin")">Danh sách tài khoản</a></li>
+            <li><a href="@Url.Action("MoKhoaTaiKhoan", "Admin")">Mở khóa tài khoản</a></li>
+            <li><a href="@Url.Action("LichSuGiaoDich", "Admin")">Lịch sử giao dịch</a></li>
+            <li><a href="@Url.Action("ThongTinAdmin", "Admin")">Thông tin admin</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Trang Quản Trị</h1>
+        </div>
+        <div class="main-content">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
