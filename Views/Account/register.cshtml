@@ -45,6 +45,14 @@
             @Html.ValidationMessageFor(m => m.AccountType, "", new { @class = "text-danger" })
             <button type="submit">Đăng ký</button>
         </form>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="text-success" style="margin-top: 15px;">
+                @TempData["SuccessMessage"]
+                <br />
+                <a href="@Url.Action("Login", "Account")">👉 Quay lại trang đăng nhập</a>
+            </div>
+        }
     </div>
 </body>
 </html>
